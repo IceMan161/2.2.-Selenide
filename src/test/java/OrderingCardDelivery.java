@@ -18,8 +18,8 @@ public class OrderingCardDelivery {
 
         open("http://localhost:9999/");
         $x("//input[@type='text']").val("Ростов-на-Дону");
-        $("[data-test-id='date'] input").sendKeys(chord(COMMAND, "a"), DELETE);
-        $("[data-test-id='date'] input").setValue("20.04.2022");
+        $("[data-test-id=date] input").sendKeys(chord(COMMAND, "a"), DELETE);
+        $("[data-test-id=date] input").setValue("20.04.2022");
         $x("//input[@name='name']").val("Суханов Артем");
         $x("//input[@name='phone']").val("+79612333444");
         $x("//label[@data-test-id='agreement']").click();
