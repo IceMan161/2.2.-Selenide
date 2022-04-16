@@ -15,6 +15,7 @@ public class OrderingCardDelivery {
 
         Configuration.holdBrowserOpen = true;
         Configuration.browserSize = "800x600";
+        Configuration.headless = true;
 
         open("http://localhost:9999/");
         $x("//input[@type='text']").val("Ростов-на-Дону");
