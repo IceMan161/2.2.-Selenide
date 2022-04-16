@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
+import static org.openqa.selenium.Keys.*;
 
 public class OrderingCardDelivery {
 
@@ -19,8 +20,8 @@ public class OrderingCardDelivery {
 
         open("http://localhost:9999/");
         $x("//input[@type='text']").val("Ростов-на-Дону");
-        //       $x("//input[@type='tel']").clear();
-        //       $x("//input[@type='tel']").val("19.04.2022");
+        $("[data-test-id=date] input").sendKeys(chord(COMMAND, "a"), DELETE);
+        $("[data-test-id=date] input").sendKeys("20.04.2022");
         $x("//input[@name='name']").val("Суханов Артем");
         $x("//input[@name='phone']").val("+79612333444");
         $x("//label[@data-test-id='agreement']").click();
